@@ -1,0 +1,7 @@
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\obj\Debug\Echednevnick.csproj.AssemblyReference.cache
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\obj\Debug\Echednevnick.csproj.CoreCompileInputs.cache
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\bin\Debug\Echednevnick.exe.config
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\bin\Debug\Echednevnick.exe
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\bin\Debug\Echednevnick.pdb
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\obj\Debug\Echednevnick.exe
+C:\Users\park_\source\repos\Echednevnick\Echednevnick\obj\Debug\Echednevnick.pdb
