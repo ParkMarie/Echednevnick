@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
-namespace Echednevnick
+namespace Zametki
 {
     internal class Program
     {
-        static DateTime data1 = DateTime.Now;
+
+
+        static DateTime data1 = new DateTime(2023, 10, 16);
 
         static void Main(string[] args)
         {
-            int min = 2;
-            int max = 6;
+            int min = 1;
+            int max = 2;
             int a = 1;
             while (true)
             {
@@ -38,14 +42,15 @@ namespace Echednevnick
                     else if (key.Key == ConsoleKey.RightArrow)
                     {
                         data1 = data1.AddDays(1);
-                        Console.SetCursorPosition(2, 0);
-                        Console.WriteLine(data1);
+                        Console.Clear();
+                        Zametki();
+
                     }
                     else if (key.Key == ConsoleKey.LeftArrow)
                     {
                         data1 = data1.AddDays(-1);
-                        Console.SetCursorPosition(2, 0);
-                        Console.WriteLine(data1);
+                        Console.Clear();
+                        Zametki();
                     }
                     Console.SetCursorPosition(0, a);
                     Console.WriteLine("->");
@@ -57,54 +62,70 @@ namespace Echednevnick
 
                 Console.SetCursorPosition(0, 8);
                 Console.Clear();
-                Console.WriteLine("Дедлайн, ю ноу: " + data1);
-                if (a == 2)
+                Console.WriteLine(data1);
+                if (a == 1 && data1.Date == new DateTime(2023, 10, 17))
                 {
                     Console.WriteLine("Что тут написано вообще ^.^?");
+                    Console.WriteLine("Дедлайн, ю ноу: " + data1);
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Название: Уборка.");
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Описание: Протереть пыль, помыть полы");
                     Console.WriteLine("-----------------------------");
                 }
-                else if (a == 3)
+
+                else if (a == 2 && data1.Date == new DateTime(2023, 10, 17))
                 {
                     Console.WriteLine("Что тут написано вообще ^.^?");
+                    Console.WriteLine("Дедлайн, ю ноу: " + data1);
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Название: Кушать - это важно ;3");
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Описание: В меню у нас сегодня онигири :0");
                     Console.WriteLine("-----------------------------");
-                }
-                else if (a == 4)
-                {
 
+                    
+}
+                else if (a == 1 && data1.Date == new DateTime(2023, 10, 18))
+                {
                     Console.WriteLine("Что тут написано вообще ^.^?");
+                    Console.WriteLine("Дедлайн, ю ноу: " + data1);
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Название: Практос.");
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Описание: Окееееей, летс гооооооууууу");
                     Console.WriteLine("-----------------------------");
                 }
-                else if (a == 5)
+                else if (a == 2 && data1.Date == new DateTime(2023, 10, 18))
                 {
-
                     Console.WriteLine("Что тут написано вообще ^.^?");
+                    Console.WriteLine("Дедлайн, ю ноу: " + data1);
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Название: Игрульки.");
                     Console.WriteLine("-----------------------------");
                     Console.WriteLine("Описание: Ура! Победа!");
                     Console.WriteLine("-----------------------------");
                 }
-                else if (a == 6)
+                else if (a == 1 && data1.Date == new DateTime(2023, 10, 20))
                 {
-
                     Console.WriteLine("Что тут написано вообще ^.^?");
+                    Console.WriteLine("Дедлайн, ю ноу: " + data1);
                     Console.WriteLine("-----------------------------");
-                    Console.WriteLine("Поработали, можно и отдохнуть.");
+                    Console.WriteLine("Название: Буль-буль.");
                     Console.WriteLine("-----------------------------");
-                    Console.WriteLine("Где там мой гусь-обнимусь -_-?");
+                    Console.WriteLine("Описание: Только без потопа.");
                     Console.WriteLine("-----------------------------");
+                }
+                else if (a == 2 && data1.Date == new DateTime(2023, 10, 20))
+                {
+                    Console.WriteLine("Что тут написано вообще ^.^?");
+                    Console.WriteLine("Дедлайн, ю ноу: " + data1);
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Название: Поработали можно и поспать.");
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Описание: Где там мой гусь-обнимусь -_-?");
+                    Console.WriteLine("-----------------------------");
+
                 }
                 Console.ReadKey();
                 Console.Clear();
@@ -117,14 +138,31 @@ namespace Echednevnick
         static void Zametki()
         {
             Console.WriteLine("  " + data1);
-            Console.WriteLine("  Добро пожаловать в ваш ежедневник :3");
-            Console.WriteLine("  1.Убраться дома.");
-            Console.WriteLine("  2.Приготовить покушать.");
-            Console.WriteLine("  3.Сделать практос.");
-            Console.WriteLine("  4.Пойти поиграть.");
-            Console.WriteLine("  5.Лечь поспать.");
+            if (data1.Date == new DateTime(2023, 10, 17))
+            {
+                Console.WriteLine("  1.Убраться дома.");
+                Console.WriteLine("  2.Приготовить покушать.");
+            }
+            else if (data1.Date == new DateTime(2023, 10, 18))
+            {
+                Console.WriteLine("  1.Сделать практос.");
+                Console.WriteLine("  2.Пойти поиграть.");
+            }
+            else if (data1.Date == new DateTime(2023, 10, 20))
+            {
+                Console.WriteLine("  1.Принять пенную ванну.");
+                Console.WriteLine("  2.Лечь поспать.");
+            }
 
         }
 
+
+
+
+
+
     }
+
+
+
 }

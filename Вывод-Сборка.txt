@@ -1,0 +1,5 @@
+﻿Сборка начата…
+1>------ Сборка начата: проект: Echednevnick, Конфигурация: Debug Any CPU ------
+1>  Echednevnick -> C:\Users\park_\source\repos\Echednevnick\Echednevnick\bin\Debug\Echednevnick.exe
+========== Сборка: успешно выполнено — 1 , со сбоем — 0, в актуальном состоянии — 0, пропущено — 0 ==========
+========== Сборка запущено в 22:55, заняло 00,569 с ==========
